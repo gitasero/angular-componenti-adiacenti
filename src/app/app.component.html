@@ -1,4 +1,13 @@
 <hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+<app-counter 
+  title="Componente 1" 
+  [counter]="counter1" 
+  (update)="counter2 = counter2 + $event">
+</app-counter>
+<app-counter 
+  title="Componente 2" 
+  [counter]="counter2" 
+  (update)="counter1 = counter1 + $event">
+</app-counter>
 </p>
